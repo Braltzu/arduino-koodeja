@@ -1,0 +1,10 @@
+void printValueAsBits(int8_t value) {
+
+for(int i = 0;i<8;i++){ 
+uint8_t bitti = ((value<<i)&0x80)>>7; 
+
+cout<<(int)bitti<<"  ";
+}
+
+cout<<endl;                  // Ja tämä tekee rivivaihdon
+}

@@ -1,0 +1,68 @@
+void printValueAsHex(uint8_t value)
+{
+    uint8_t ala =value & 0x0F;// Keksi tähän lauseke, jolla saat irroitettua 4 alinta bittiä
+    uint8_t yla =value >> 4; // Keksi tähän lauseke, jolla saat irroitettua 4 ylintä bittiä
+    string a;
+    string y;
+    
+    if(ala==10)
+    {
+        a = "A";
+    }
+    else if(ala == 11)
+    {
+        a = "B";
+    }
+    else if(ala == 12)
+    {
+        a = "C";
+    }
+    else if(ala == 13)
+    {
+        a = "D";
+    }
+    else if(ala == 14)
+    {
+        a = "E";
+    }
+    else if(ala == 15)
+    {
+        a = "F";
+    }
+    else
+    {
+        a = to_string(ala);
+    }
+    
+    
+    if(yla==10)
+    {
+        y = "A";
+    }
+    else if(yla == 11)
+    {
+        y = "B";
+    }
+    else if(yla == 12)
+    {
+        y = "C";
+    }
+    else if(yla == 13)
+    {
+        y = "D";
+    }
+    else if(yla == 14)
+    {
+        y = "E";
+    }
+    else if(yla == 15)
+    {
+        y = "F";
+    }
+    else
+    {
+        y = to_string(yla);
+    }
+    
+    cout<<"0x"<<y<<a<<endl;
+}
